@@ -5,10 +5,17 @@
 #include <iostream>
 #include <cstdint>
 
-int main(){
-    int32_t ammo = 100;
-    uint8_t health_items = 5;
+#define Max 500
+//#define debug
 
+int main(){
+    //int32_t ammo = 100;
+    int32_t ammo = Max / 5;
+    uint8_t health_items = 5;
+#ifdef debug 
+std::cout <<"Game starts...." << std::endl; 
+//comment out "3define debu" and check the change 
+#endif
     ammo += 200; // Player finds extra ammo
     health_items -= 2; // Player uses some health items
 
